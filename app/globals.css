@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* SalonRadar design-system tokens, theme mapping, and base layer. */
+@import '@salonradar/ui/styles.css';
+
+/* Tailwind v4 must scan the design system's source for class names. */
+@source '../packages/salonradar-ui/src';
