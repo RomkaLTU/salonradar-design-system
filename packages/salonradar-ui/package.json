@@ -4,13 +4,14 @@
   "description": "SalonRadar design system — warm coral + cream shadcn/ui (new-york) components, tokens, and theme.",
   "license": "MIT",
   "author": "SalonRadar",
-  "homepage": "https://github.com/RomkaLTU/v0-salonradar-ui#readme",
+  "homepage": "https://github.com/RomkaLTU/salonradar-design-system#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RomkaLTU/v0-salonradar-ui.git"
+    "url": "git+https://github.com/RomkaLTU/salonradar-design-system.git",
+    "directory": "packages/salonradar-ui"
   },
   "bugs": {
-    "url": "https://github.com/RomkaLTU/v0-salonradar-ui/issues"
+    "url": "https://github.com/RomkaLTU/salonradar-design-system/issues"
   },
   "keywords": [
     "salonradar",
