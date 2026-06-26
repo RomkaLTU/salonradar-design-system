@@ -82,8 +82,8 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "pnpm clean && tsc -p tsconfig.build.json",
-    "prepublishOnly": "pnpm build"
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "prepublishOnly": "rm -rf dist && tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
