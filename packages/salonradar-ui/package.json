@@ -27,6 +27,9 @@
     "*.css"
   ],
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "styles",
@@ -34,55 +37,43 @@
     "LICENSE"
   ],
   "exports": {
-    ".": "./src/index.ts",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
     "./styles.css": "./styles/globals.css",
-    "./lib/utils": "./src/lib/utils.ts",
-    "./logo": "./src/logo.tsx",
-    "./theme-provider": "./src/theme-provider.tsx",
-    "./hooks/use-mobile": "./src/hooks/use-mobile.ts",
-    "./hooks/use-toast": "./src/hooks/use-toast.ts",
-    "./*": "./src/components/ui/*.tsx"
+    "./lib/utils": {
+      "types": "./dist/lib/utils.d.ts",
+      "default": "./dist/lib/utils.js"
+    },
+    "./logo": {
+      "types": "./dist/logo.d.ts",
+      "default": "./dist/logo.js"
+    },
+    "./theme-provider": {
+      "types": "./dist/theme-provider.d.ts",
+      "default": "./dist/theme-provider.js"
+    },
+    "./hooks/use-mobile": {
+      "types": "./dist/hooks/use-mobile.d.ts",
+      "default": "./dist/hooks/use-mobile.js"
+    },
+    "./hooks/use-toast": {
+      "types": "./dist/hooks/use-toast.d.ts",
+      "default": "./dist/hooks/use-toast.js"
+    },
+    "./*": {
+      "types": "./dist/components/ui/*.d.ts",
+      "default": "./dist/components/ui/*.js"
+    }
   },
   "publishConfig": {
-    "access": "public",
-    "main": "./dist/index.js",
-    "module": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "exports": {
-      ".": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "./styles.css": "./styles/globals.css",
-      "./lib/utils": {
-        "types": "./dist/lib/utils.d.ts",
-        "default": "./dist/lib/utils.js"
-      },
-      "./logo": {
-        "types": "./dist/logo.d.ts",
-        "default": "./dist/logo.js"
-      },
-      "./theme-provider": {
-        "types": "./dist/theme-provider.d.ts",
-        "default": "./dist/theme-provider.js"
-      },
-      "./hooks/use-mobile": {
-        "types": "./dist/hooks/use-mobile.d.ts",
-        "default": "./dist/hooks/use-mobile.js"
-      },
-      "./hooks/use-toast": {
-        "types": "./dist/hooks/use-toast.d.ts",
-        "default": "./dist/hooks/use-toast.js"
-      },
-      "./*": {
-        "types": "./dist/components/ui/*.d.ts",
-        "default": "./dist/components/ui/*.js"
-      }
-    }
+    "access": "public"
   },
   "scripts": {
     "clean": "rm -rf dist",
     "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch",
     "prepublishOnly": "rm -rf dist && tsc -p tsconfig.build.json"
   },
   "dependencies": {

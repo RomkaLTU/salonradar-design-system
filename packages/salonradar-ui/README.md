@@ -20,6 +20,15 @@ Import the theme stylesheet once at your app's entry (it defines the design toke
 import "@salonradar/ui/styles.css"
 ```
 
+With Tailwind CSS v4, also tell Tailwind to scan this package so its component
+class names aren't purged. In your global CSS, after `@import 'tailwindcss'`:
+
+```css
+@import 'tailwindcss';
+@import '@salonradar/ui/styles.css';
+@source '../node_modules/@salonradar/ui/dist';
+```
+
 Wrap your app in the provider for light/dark theming:
 
 ```tsx
