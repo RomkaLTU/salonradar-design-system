@@ -22,3 +22,7 @@ next-env.d.ts
 # Local tooling
 .serena/
 .idea/
+
+# Installed agent skills — keep skills-lock.json, ignore the vendored skill content
+.agents/skills/
+.claude/skills/
