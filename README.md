@@ -2,6 +2,15 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
 
+The repository owns the published `@salonradar/ui` package. The Laravel/Inertia
+application at `RomkaLTU/salonradar-app` is a production consumer and pins an
+exact package version. Shared component changes are released at phase
+boundaries, then adopted explicitly by the app; app-specific wrappers and theme
+tokens remain in the application.
+
+See [`docs/v0-design-system.md`](docs/v0-design-system.md) for package
+consumption and release details.
+
 ## Built with v0
 
 This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.

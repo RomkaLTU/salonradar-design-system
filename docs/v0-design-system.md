@@ -11,7 +11,8 @@ published package, a real consumer app, and the globals needed to use it correct
 |---|---|
 | **npm package** | `@salonradar/ui` (public — **no `NPM_TOKEN` needed**) |
 | **Repository** | `https://github.com/RomkaLTU/salonradar-design-system` |
-| **Real consumer app** | the root Next.js showcase in this repo (`app/`, `components/`) |
+| **Production consumer** | [`RomkaLTU/salonradar-app`](https://github.com/RomkaLTU/salonradar-app) (Laravel/Inertia; exact package version) |
+| **Showcase consumer** | the root Next.js app in this repo (`app/`, `components/`) |
 | **Docs** | `packages/salonradar-ui/README.md` |
 
 Because the package is **public**, skip the credentials / shared-env-var step in
@@ -85,9 +86,13 @@ Confirm it picked up the tokens and components, then proceed.
 
 1. **Develop:** edit `packages/salonradar-ui/src`; run
    `npm run dev --workspace @salonradar/ui` (tsc watch) alongside `npm run dev`.
-2. **Release:** bump the version, then
+2. **Verify:** run `npm run build:ui` and `npm run build` so both the package and
+   showcase consumer compile against the change.
+3. **Release at the phase boundary:** bump the version, then
    `npm publish --workspace @salonradar/ui --access public --otp=<code>`.
-3. **Update v0:** bump the version v0 pins so it generates against the new release.
+4. **Update consumers:** pin the new exact version in `salonradar-app` and in v0,
+   then install and build each consumer. Do not use caret or tilde ranges for the
+   production app.
 
 v0 reads the **published package**, so committed `dist/` is irrelevant to it — which
 is why `dist/` is git-ignored here.
