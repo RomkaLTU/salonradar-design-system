@@ -19,7 +19,7 @@ export default function Page() {
             The salon<span className="italic text-primary">radar</span> design system
           </h1>
           <p className="mx-auto max-w-2xl text-balance text-lg text-muted-foreground">
-            A friendly, booking-first UI kit built on shadcn/ui (new-york). OKLCH tokens, Geist and
+            A friendly, booking-first UI kit built on shadcn/ui (new-york). OKLCH tokens, Instrument Sans and
             Instrument Serif type, and a full set of accessible components.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">

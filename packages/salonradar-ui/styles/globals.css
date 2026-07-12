@@ -79,7 +79,7 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-geist), 'Geist Fallback', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-instrument-sans), 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
