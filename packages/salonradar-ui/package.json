@@ -1,6 +1,6 @@
 {
   "name": "@salonradar/ui",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "SalonRadar design system — warm coral + cream shadcn/ui (new-york) components, tokens, and theme.",
   "license": "MIT",
   "author": "SalonRadar",
@@ -73,9 +73,9 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && node --import ./scripts/register-css-stub.mjs scripts/verify-esm.mjs",
     "dev": "tsc -p tsconfig.build.json --watch",
-    "prepublishOnly": "rm -rf dist && tsc -p tsconfig.build.json"
+    "prepublishOnly": "rm -rf dist && tsc -p tsconfig.build.json && node --import ./scripts/register-css-stub.mjs scripts/verify-esm.mjs"
   },
   "dependencies": {
     "next-themes": "^0.4.6"
